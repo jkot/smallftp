@@ -1,0 +1,7 @@
+HOME/+ftp
+HOME/+upload    /upload         none    0       3
+HOME/+blackbox  /blackbox       none    0       2
+HOME/+filmy     /media/filmy    ghost   3       1
+HOME/+mp3       /media/mp3      ghost   3       1
+
+
