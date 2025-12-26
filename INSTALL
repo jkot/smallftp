@@ -1,0 +1,46 @@
+--------------------
+Instalacni instrukce
+--------------------
+
+
+K dispozici je program zkompilovany prekladacem gcc
+ve verzi 3.2 pro RedHat 8.0 Psyche
+.
+Jinak instalace probiha klasicky spustenim prikazu
+
+make			.... zkompiluje program
+make install		.... vytvori ukazkovy priklad
+
+
+Pote staci uz jen zadat:
+
+./smallFTPd
+
+
+a pak se pripojit na server napriklad prikazem:
+
+ftp localhost 1900
+
+
+
+*** UZITECNE: ***
+ 
+Prikaz make install vytvori ukazkovy priklad mozne nasdilene adresarove
+stuktury (vytvori v aktualnim adresari nekolik podadresaru) a zaroven 
+nastaveni, ktere umoznuje tyto adresare sdilet pomoci smallFTPd.
+
+Priklad obsahuje i ukazku cerne skrinky, vice viz uzivatelsky manual.
+
+Priklad pracuje s administratorskym uctem "ghost" s heslem "busters" a obycejnym
+uctem "foo" s heslem "bar".
+
+
+
+
+*** DULEZITE: ***
+
+Pro kompilaci je potreba mit nainstalovanou knihovnu gdbm, ta je ale v mnoha
+distribucich dodavana standardne. Nutna je tez knihovna openssl verze >= 0.9.6
+
+
+

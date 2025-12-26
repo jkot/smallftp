@@ -1,0 +1,69 @@
+--------------------------------------------------------------------------
+tema 	   
+	   FTP daemon
+
+jmeno 	   
+	   smallFTPd
+
+platforma
+	   linux (RH8.0)
+
+vlastnosti
+
+
+
+co nejvetsi implementace RFC959
+	-- bez mene obvyklych funkci jako je napr. TYPE EBCDIC
+	   nebo Compressed Mode a Page Structure.
+	   K dispozici bude napr. obnoveni stahovani a s tim souvisejici
+	   prikazy a mody jako je napr. Record-structure.
+
+dale implementace vlastnich prav, podle uzivatelu demona
+	-- uzivatele demona se nemusi shodovat se systemovymi
+	   uzivateli na danem pocitaci, proto bude vytvoren
+	   vlastni system prav, realnym vlastnikem uploadovanych
+	   souboru a adresaru bude demon nebo uzivatel, ktery ho spustil. 
+	   Server si bude udrzovat informace o konkretnich
+	   vlastnicich danych souboru zvlast. Uzivatel uvidi
+	   jen sve soubory a soubory jejichz lokalnim vlastnikem
+	   je uzivatel anonymous.
+
+zakaz pristupu ze zadanych IP adres
+	-- jejich seznam bude nacitan z konfiguracniho souboru
+	   nebo on-line z administratorskeho uctu (viz dale)
+
+virtualni filesystem
+	-- nasdilene adresare se budou klientovi jevit jako pripojene
+	   na rootu "/", cesta k realnemu adresari v systemu, ktery bude
+	   mapovan jako "/" bude nacitana z konfiguracniho souboru.
+	   Ke kazdemu nasdilenemu souboru nebo adresari bude moznost zadat jak 
+	   (kam) se ma na "/" mapovat.
+
+administratorsky ucet
+	-- k demonu bude mozno se pripojit na administratorsky ucet, ze 
+	   ktereho budou pristupne specialni prikazy pro rizeni demona. 
+	   Bude mozny napr. vypis seznam pripojenych uzivatelu, zadani IP 
+	   adresy, ze ktere ma byt zakazan pristup, vypis nastaveni demona, nebo 
+	   jeho vypnuti.
+
+nastaveni 
+	-- nastaveni bude nacitano z konfiguracniho souboru. Za behu demona 
+	   bude mozne zmenit nastaveni bud zaslanim signalu, ktere sdeli 
+	   demonu, aby znova nacetl konfiguracni soubor, nebo z 
+	   administratorskeho uctu.
+
+pravdepodobne
+	   implementace RFC2228 (alespon castecna)
+
+predpokladane pouzite knihovny/prostredky
+	   flex (mozna)
+	   knihovny pro sifrovani a veci tykajici se RFC2228, jako napr. 	   
+	   GSSAPI, Kerberos, ...
+--------------------------------------------------------------------------
+
+Odhad funkci beta verze
+	-- prikazy pro pohyb v adresarich, stahovani souboru, uploadovani
+	   souboru ve stream modu s typem ASCII nebo IMAGE. Pasivni mod,
+	   administratorsky ucet, znovunacteni konfiguracniho souboru na
+	   signal, zakaz pristupu z danych IP adres.
+
