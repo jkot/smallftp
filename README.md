@@ -3,7 +3,7 @@ smallftp
 
 smallftp is a basic FTP server (implementing RFC959, and partly RFC2228) that I created over a long weekend in 2003 as a school project at Charles University in Prague.
 
-I decided to put it on GitHub so that I can play with it and polish it a bit when I feel like it. Currently, it comments and docs are in Czech only :-/
+I decided to put it on GitHub so that I can play with it and polish it a bit when I feel like it. Currently, comments and docs are in Czech only :-/
 
  * *docs/* - doxygen-generated API documentation, a user manual 
  * *src/* - source code
